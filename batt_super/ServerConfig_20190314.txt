@@ -1,0 +1,101 @@
+-- INITIAL INSTALLATION (APACHE, PHP, MYSQL) --
+
+Apache Installation:
+sudo apt-get install apache2
+
+MySQL Installation:
+sudo apt-get install mysql-server  ->>> Installs the legacy version 5....
+Check MySQL Website for most recent version 
+
+Secure MySQL
+sudo mysql_secure_installation
+
+Answers:
+Yes
+0 (LOW)
+root00Long
+Yes (Accept)
+Yes (Anonymous)
+Yes (Remote)
+Yes (Test)
+Yes (Preivilege)
+
+Restart MySQL
+service mysql restart
+
+PHP Installation:
+
+sudo apt-get install php libapache2-mod-php
+
+PHP:
+
+Install mysqli: sudo apt-get install php-mysql
+Activate the mysqli module in: php.ini
+
+MySql login:
+
+You MUST sudo to login as root!
+
+Database backup:
+mysqldump --databases batt_super --user=root --password > C:\Temp\dbexport\batt_super.sql
+Database import:
+sudo mysql --user=root -p --host=localhost < /home/administrator/shared/db_backup/batt_super.sql
+
+Samba:
+
+sudo apt-get update
+sudo apt-get install samba
+
+Folder: /home/administrator/shared
+sudo smbpasswd -a administrator
+Username: administrator
+Password: 1*************
+
+sudo cp /etc/samba/smb.conf /etc/samba/smb_backup.conf
+
+Once "smb.conf" has loaded, add this to the very end of the file:
+
+[<folder_name>]
+path = /home/<user_name>/<folder_name>
+valid users = <user_name>
+read only = no
+
+sudo service smbd restart
+testparm
+
+
+
+--------------------------------------------------------------
+
+-- USEFULL COMMANDS --
+
+Linux:
+sudo apt-get update
+sudo apt-get upgrade
+systemctl status apache2
+sudo cp -r /home/administrator/shared/batt_super_ver_X_X/ /var/www/
+
+Apache:
+apachectl start
+apachectl stop
+
+ServerRoot              ::      /etc/apache2
+DocumentRoot            ::      /var/www
+Apache Config Files     ::      /etc/apache2/apache2.conf
+                        ::      /etc/apache2/ports.conf
+Default VHost Config    ::      /etc/apache2/sites-available/default, /etc/apache2/sites-enabled/000-default
+Module Locations        ::      /etc/apache2/mods-available, /etc/apache2/mods-enabled
+ErrorLog                ::      /var/log/apache2/error.log
+AccessLog               ::      /var/log/apache2/access.log
+cgi-bin                 ::      /usr/lib/cgi-bin
+binaries (apachectl)    ::      /usr/sbin
+start/stop              ::      /etc/init.d/apache2 (start|stop|restart|reload|force-reload|start-htcacheclean|stop-htcacheclean)
+
+Error Log: nano /var/log/apache2/error.log
+
+------------------------------------------------------------------
+
+
+
+
+

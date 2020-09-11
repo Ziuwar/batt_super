@@ -1,0 +1,155 @@
+/*CSS sytlesheet file*/
+
+/*Body section*/
+body {
+  background-color: #e0e0eb;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.data{
+  position:relative;
+  /*max-width:1600px;*/
+  margin: 25px auto 25px auto;
+  padding: 10px;
+
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/*Data tables section*/
+.header{
+  text-align: center;
+  background-color: white;
+  color: Black;
+  font-size: 15px;
+}
+
+.datarow{
+	font-size: 15px;
+}
+
+tr{
+	height: 25px;
+}
+
+tr:nth-child(even) {
+	background-color: white;
+}
+
+th{
+  height: 30px;
+  border-bottom: 1px solid black;
+}
+
+.data_update_button{
+	
+	margin: auto auto 25px 5px;
+	padding: 10px;
+
+}
+
+/*Text section*/
+.basic_text{
+  text-align: center;
+
+  position:relative;
+  width:auto;
+  max-width:800px;
+  margin: 25px auto 25px auto;
+}
+
+/*User login section*/
+.login_user{
+	
+	text-color: Black;
+	margin: 25px 25px auto 25px;
+	padding: 10px;
+	border: 2px solid black;
+  	border-radius: 10px;
+}
+
+.login_user_label{
+	text-color: black;
+	
+}
+
+
+.user_button{
+
+	margin: 15px auto 10px auto;
+	padding: 10px;
+	
+}
+
+span.error{ background-color: Tomato;} 
+span.result_ok{ background-color: MediumSeaGreen;} 
+span.result_nok{ background-color: Tomato;} 
+
+/*Footer section*/
+Footer{
+  color: Black;
+  text-align: center;
+  font-size: 12px;
+  background-color: LightGray;
+  border: 1px solid black;
+  padding: 5px 0px 5px;
+
+  position:relative;
+  width:auto;
+  max-width:2000px;
+  margin: 50px auto 25px auto;
+}
+
+
+/*Navbar section*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li:last-child{
+  border-right: none;
+}
+
+.filter_units{
+	
+	margin: auto auto auto 15px;
+	padding: 13px;
+}
+
+.filter_label{
+	
+	color: white;
+	margin: auto;
+	padding: auto auto auto 100px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #8383af;
+}
+
+
